@@ -7,7 +7,7 @@ function login(body){
     return promisse
 }
 
-function cadastro(){
+function cadastro(body){
     const promisse = axios.post(`http://localhost:4000/cadastroUser`, body)
     return promisse
 

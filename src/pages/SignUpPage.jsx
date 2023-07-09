@@ -14,9 +14,21 @@ export default function SignUpPage() {
 
   }
 
+  
+
 
   function cadastroLogin(e){
     e.preventDefault()
+
+    if (form.senha !== form.repetirSenha) {
+      alert("As senhas não coincidem. Verifique os campos de senha.");
+      return;
+    }
+
+    if (form.senha.length < 3) {
+      alert("Senha inválida. A senha deve ter no mínimo três caracteres.");
+      return;
+    }
     
     const body = {
       email: form.email,
